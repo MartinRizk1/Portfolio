@@ -32,3 +32,11 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Personal images
+public/profile-image.jpg
+public/profile-image.*
+img/*@*.jpg
+img/*@*.jpeg
+img/*@*.png
+img/personal-*.*

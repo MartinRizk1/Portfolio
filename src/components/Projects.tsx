@@ -121,7 +121,7 @@ const Projects = () => {
       description: "A modern portfolio website built with React and Chakra UI, showcasing my computer engineering background and technical expertise. Features responsive design, smooth animations, and a sleek dark theme with intuitive navigation.",
       image: "/portfolio-icon.svg",
       technologies: ["React", "TypeScript", "Chakra UI", "Framer Motion"],
-      github: "https://github.com/MartinRizk1/portfolio",
+      github: "https://github.com/MartinRizk1/Portfolio",
       demo: window.location.origin
     }
   ];

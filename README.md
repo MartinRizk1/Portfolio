@@ -65,8 +65,8 @@ The application will be available at `http://localhost:3000`.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/MartinRizk1/portfolio.git
-cd portfolio
+git clone https://github.com/MartinRizk1/Portfolio.git
+cd Portfolio
 ```
 
 2. Create a `.env` file in the root directory:
