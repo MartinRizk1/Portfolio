@@ -33,10 +33,9 @@ yarn-error.log*
 *.sln
 *.sw?
 
-# Personal images
-public/profile-image.jpg
-public/profile-image.*
-img/*@*.jpg
-img/*@*.jpeg
-img/*@*.png
-img/personal-*.*
+# Personal images - keep locally but don't track in git
+/public/profile-image.jpg
+/public/profile-image.jpeg
+/public/profile-image.png
+/img/profile-*.{jpg,jpeg,png}
+/img/*@*.{jpg,jpeg,png}

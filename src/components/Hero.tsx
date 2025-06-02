@@ -38,8 +38,8 @@ const Hero: React.FC = () => {
                         animation={animation}
                     >
                         <Image
-                            src="https://via.placeholder.com/400x400/1A1A1A/E2B777?text=MR"
-                            alt="Profile"
+                            src="/profile-image.jpg"
+                            alt="Martin Rizk"
                             borderRadius="full"
                             boxSize={{ base: '320px', md: '400px' }}
                             objectFit="cover"
