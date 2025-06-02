@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Stack, Link, Icon, Heading, Text, Button, VStack, HStack } from '@chakra-ui/react';
+import { Box, Container, Stack, Link, Icon, Heading, Text, VStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaHandshake, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -43,6 +43,9 @@ const ContactLink = ({ icon, text, href, label }: { icon: any; text: string; hre
 
 const Contact: React.FC = () => {
   const email = import.meta.env.VITE_EMAIL || 'martinrizk8@gmail.com';
+  const githubUrl = import.meta.env.VITE_GITHUB_URL || 'https://github.com/MartinRizk1#';
+  const linkedinUrl = import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/martin-rizk-a3b877237/#';
+  const handshakeUrl = import.meta.env.VITE_HANDSHAKE_URL || 'https://utdallas.joinhandshake.com/profiles/ftucpk#';
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
 
   return (
@@ -92,26 +95,26 @@ const Contact: React.FC = () => {
           >
             <ContactLink
               icon={FaEnvelope}
-              text={email}
+              text="Email"
               href={gmailUrl}
               label="Email"
             />
             <ContactLink
               icon={FaGithub}
               text="GitHub Profile"
-              href={import.meta.env.VITE_GITHUB_URL || "https://github.com/MartinRizk1"}
+              href={githubUrl}
               label="GitHub"
             />
             <ContactLink
               icon={FaLinkedin}
               text="LinkedIn Profile"
-              href={import.meta.env.VITE_LINKEDIN_URL || "https://www.linkedin.com/in/martin-rizk-a3b877237/"}
+              href={linkedinUrl}
               label="LinkedIn"
             />
             <ContactLink
               icon={FaHandshake}
               text="Handshake Profile"
-              href={import.meta.env.VITE_HANDSHAKE_URL || "https://utdallas.joinhandshake.com/profiles/58162350"}
+              href={handshakeUrl}
               label="Handshake"
             />
           </Stack>

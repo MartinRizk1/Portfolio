@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Box, Container, SimpleGrid, Text, Heading, Icon } from '@chakra-ui/react';
-import { FaReact, FaNode, FaGit, FaDatabase, FaPython, FaCode, FaMicrochip, FaServer } from 'react-icons/fa';
-import { SiTypescript, SiJavascript, SiDocker, SiCplusplus } from 'react-icons/si';
+import { FaCode, FaMicrochip, FaServer } from 'react-icons/fa';
+import { SiCplusplus, SiPython } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
@@ -62,14 +62,9 @@ const Skills: React.FC = () => {
       description: 'System-level programming and hardware interfacing'
     },
     { 
-      icon: FaPython,
+      icon: SiPython,
       title: 'Python',
       description: 'Data processing, automation, and scripting'
-    },
-    { 
-      icon: FaReact,
-      title: 'Web Development',
-      description: 'Full-stack development with modern frameworks'
     },
     { 
       icon: FaMicrochip,
@@ -80,7 +75,7 @@ const Skills: React.FC = () => {
       icon: FaServer,
       title: 'System Architecture',
       description: 'Hardware-software system design and integration'
-    },
+    }
   ];
 
   return (
@@ -97,44 +92,20 @@ const Skills: React.FC = () => {
           Technical Expertise
         </Heading>
         <SimpleGrid 
-          columns={{ base: 1, sm: 2, lg: 3 }}
+          columns={{ base: 1, md: 2, lg: 3 }}
           spacing={{ base: 6, md: 8 }}
           maxW="5xl"
           mx="auto"
           px={4}
         >
           {skills.map((skill, index) => (
-            <Box
+            <SkillCard 
               key={index}
-              bg="gray.900"
-              p={8}
-              borderRadius="sm"
-              transition="all 0.3s"
-              _hover={{ transform: 'translateY(-4px)', shadow: 'xl' }}
-            >
-              <Icon 
-                as={skill.icon} 
-                w={12} 
-                h={12} 
-                mb={4} 
-                color="accent.500" 
-              />
-              <Text 
-                fontWeight="semibold" 
-                fontSize="lg"
-                mb={3}
-                color="white"
-              >
-                {skill.title}
-              </Text>
-              <Text 
-                color="gray.300"
-                fontSize="md"
-                lineHeight="tall"
-              >
-                {skill.description}
-              </Text>
-            </Box>
+              icon={skill.icon}
+              title={skill.title}
+              description={skill.description}
+              delay={index}
+            />
           ))}
         </SimpleGrid>
       </Container>

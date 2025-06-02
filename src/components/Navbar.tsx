@@ -10,6 +10,9 @@ const Navbar: React.FC = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Use initials or generic logo text
+  const logoText = 'Portfolio';
+
   return (
     <MotionBox 
       position="fixed"
@@ -42,7 +45,7 @@ const Navbar: React.FC = () => {
             _hover={{ color: 'white' }}
             transition="all 0.3s"
           >
-            M·Rizk
+            {logoText}
           </Text>
 
           <Stack direction="row" spacing={{ base: 4, md: 8 }} align="center">

@@ -8,6 +8,8 @@ const fadeIn = keyframes`
 
 const Hero: React.FC = () => {
     const animation = `${fadeIn} 1s ease-out`;
+    const name = import.meta.env.VITE_NAME || 'Full Name';
+    const profileImage = import.meta.env.VITE_PROFILE_IMAGE_URL || '/img/Personal-Image.jpg';
 
     return (
         <Box 
@@ -38,17 +40,32 @@ const Hero: React.FC = () => {
                         animation={animation}
                     >
                         <Image
-                            src="/profile-image.jpg"
-                            alt="Martin Rizk"
+                            src={profileImage}
+                            alt="Profile"
                             borderRadius="full"
                             boxSize={{ base: '320px', md: '400px' }}
                             objectFit="cover"
+                            objectPosition="center 25%"
                             mx="auto"
                             border="4px solid"
                             borderColor="accent.500"
                             shadow="2xl"
                             transition="transform 0.3s ease"
                             _hover={{ transform: 'scale(1.02)' }}
+                            fallback={
+                                <Box
+                                    boxSize={{ base: '320px', md: '400px' }}
+                                    borderRadius="full"
+                                    bg="gray.800"
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    border="4px solid"
+                                    borderColor="accent.500"
+                                >
+                                    <Text fontSize="6xl">👤</Text>
+                                </Box>
+                            }
                         />
                     </Box>
                     <Box 
@@ -64,7 +81,7 @@ const Hero: React.FC = () => {
                             fontWeight="bold"
                             letterSpacing="wider"
                         >
-                            Martin Rizk
+                            {name}
                         </Heading>
                         <Text 
                             fontSize={{ base: 'lg', md: 'xl' }} 

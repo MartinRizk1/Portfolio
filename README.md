@@ -1,124 +1,94 @@
-# My Personal Portfolio
+# my-portfolio/README.md
 
-A modern, responsive portfolio website built with React, TypeScript, and Chakra UI, featuring a sleek dark theme and smooth animations.
+# Personal Portfolio Website
 
-Welcome to my personal portfolio website! This project showcases my skills, experience, and contact information.
+A modern, responsive portfolio website built with React, TypeScript, and Chakra UI.
+
+## Features
+
+- Dark theme with gold accents
+- Responsive design
+- Smooth animations
+- SEO friendly
+- Easy to customize
 
 ## Project Structure
 
-- **src/**: Contains all the source code for the application.
-  - **components/**: Reusable components for the website.
-    - `About.tsx`: Displays a description about me.
-    - `Contact.tsx`: Contains my contact information.
-    - `Hero.tsx`: Displays my picture and a brief description.
-    - `Layout.tsx`: Wraps the main layout of the website.
-    - `Navbar.tsx`: Contains navigation links.
-    - `Skills.tsx`: Displays my skill set in a grid format.
-  - **styles/**: Contains CSS styles for the components.
-    - `index.css`: Styles for the overall layout and components.
-  - `App.tsx`: The main application component.
-  - `main.tsx`: Entry point of the application.
-  - `vite-env.d.ts`: TypeScript definitions for Vite.
-
-- **public/**: Contains static files.
-  - `index.html`: Main HTML file for the application.
-
-- `index.html`: Additional HTML file for fallback or routing.
-
-- `package.json`: Configuration file for npm.
-
-- `tsconfig.json`: Configuration file for TypeScript.
-
-- `vite.config.ts`: Configuration file for Vite.
+```
+my-portfolio/
+├── public/          # Static assets
+├── src/
+│   ├── components/  # React components
+│   ├── styles/      # CSS styles
+│   ├── App.tsx      # Main app component
+│   └── theme.ts     # Theme configuration
+└── ...
+```
 
 ## Getting Started
 
-To get started with this project, clone the repository and install the dependencies:
+1. Clone the repository:
 
 ```bash
 git clone <repository-url>
 cd my-portfolio
+```
+
+2. Install dependencies:
+
+```bash
 npm install
 ```
 
-## Running the Application
+3. Create environment variables:
 
-To run the application in development mode, use the following command:
+   - Copy `.env.example` to `.env`
+   - Update the values in `.env` with your information
+
+4. Add your profile image:
+
+   - Place your profile image in `public/img/`
+   - Update VITE_PROFILE_IMAGE_URL in `.env`
+
+5. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`.
+## Environment Variables
 
-## Features
+Required environment variables:
 
-- 🌙 Dark theme with professional styling
-- 💻 Computer engineering focus
-- 🎯 Skills grid showcasing technical expertise
-- 🚀 Projects showcase
-- 📱 Fully responsive design
-- ✨ Smooth animations with Framer Motion
-- 📧 Contact section with social links
+- `VITE_NAME`: Your full name
+- `VITE_EMAIL`: Your email address
+- `VITE_GITHUB_URL`: Your GitHub profile URL
+- `VITE_LINKEDIN_URL`: Your LinkedIn profile URL
+- `VITE_HANDSHAKE_URL`: Your Handshake profile URL
+- `VITE_PROFILE_IMAGE_URL`: Path to your profile image
 
-## Quick Start
+## Customization
 
-1. Clone the repository:
+1. Theme: Edit `src/theme.ts` to customize colors and styles
+2. Content: Update text in components under `src/components/`
+3. Images: Replace placeholder images in `public/img/`
+
+## Deployment
+
+1. Build the project:
+
 ```bash
-git clone https://github.com/MartinRizk1/Portfolio.git
-cd Portfolio
+npm run build
 ```
 
-2. Create a `.env` file in the root directory:
-```bash
-cp .env.example .env
-```
-Then update the `.env` file with your personal information.
+2. Deploy to your preferred hosting service (Vercel, Netlify, etc.)
 
-3. Install dependencies:
-```bash
-npm install
-```
+## Security Notes
 
-4. Start the development server:
-```bash
-npm run dev
-```
-
-## Deployment to Vercel
-
-1. Create an account on [Vercel](https://vercel.com) if you haven't already
-
-2. Install the Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-3. Login to Vercel:
-```bash
-vercel login
-```
-
-4. Deploy:
-```bash
-vercel
-```
-
-### Environment Variables
-
-Make sure to add these environment variables in your Vercel project settings:
-
-- `VITE_EMAIL`
-- `VITE_GITHUB_URL`
-- `VITE_LINKEDIN_URL`
-- `VITE_HANDSHAKE_URL`
-
-## Development
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
+- Never commit `.env` file
+- Use environment variables for personal information
+- Keep profile images in private storage for production
 
 ## License
 
-MIT © Martin Rizk
+MIT License - feel free to use this template for your own portfolio!
